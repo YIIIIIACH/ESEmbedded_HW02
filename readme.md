@@ -1,4 +1,4 @@
-HW02
+E940346042 Hw02
 ===
 This is the hw02 sample. Please follow the steps below.
 
@@ -56,3 +56,21 @@ This is the hw02 sample. Please follow the steps below.
 --------------------
 
 Please take your note here.
+1. design of my experiment
+process of experiment
+[first] see the result of push and pop by insert instruction one by one 
+[second] see the result of push in ascending order  push {r0,r1,r2,r3}
+[third]  see the result of push in descending order push {r3,r2,r1,r0}
+	
+2. when I try to makefile my assembly code main.s , there are some warning coming out.
+it said that my register range out of ascending order. Everytime the regs after pop and push instruction were not in ascending order the warning sign comes out.
+ex: 	push {r4,r3,r2,r1} =>> warning
+	pop  {r7,r6,r5,r4} =>> warning 
+![Image 1](./1.png)
+
+3. Later I emulate the main.s , the result become strange . when it comes to push or pop instruction in decsending order at original code ,it will turn out to become ascending order.
+
+(original )                  ( result show on emulator)
+push {r2,r1,r0}   	      push {r0,r1,r2}
+![Image 2] (./2.png)
+
